@@ -241,7 +241,7 @@ class Jetcraft(pygame.sprite.Sprite):
         self.image = self.frames[self.current_frame]
         self.rect = self.image.get_rect()
         y = random.randint(0, _globals.GAME_SCREEN_HEIGHT * 2 // 3)
-        x = 0 if self.direction is 1 else _globals.GAME_SCREEN_WIDTH - 1
+        x = 0 if self.direction == 1 else _globals.GAME_SCREEN_WIDTH - 1
         self.rect.center = (x, y)
         Jetcraft.Count += 1
 
