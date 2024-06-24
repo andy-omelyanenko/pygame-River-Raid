@@ -371,10 +371,10 @@ class Tank(pygame.sprite.Sprite):
             if (not self.is_firing) and (random.randint(0, 120) == 1):
                 if self.direction == 1:
                     # shooting to the right
-                    tank_shell = Tank_Shell(self.rect.right, self.rect.centery - 7, self.rect.right + self.firing_distance, self)
+                    tank_shell = Tank_Shell(self.rect.right + 5, self.rect.centery - 7, self.rect.right + self.firing_distance, self)
                 else:
                     # shooting to the left
-                    tank_shell = Tank_Shell(self.rect.left, self.rect.centery - 7, self.rect.left - self.firing_distance, self)
+                    tank_shell = Tank_Shell(self.rect.left - 10, self.rect.centery - 5, self.rect.left - self.firing_distance, self)
                 _globals.Scenery.add(tank_shell)
                 self.is_firing = True
                 Sounds.tank_shell()
